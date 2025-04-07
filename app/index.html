@@ -14,6 +14,13 @@
 
     <script type="module">
       import { NavBar } from "./component/NavBar/script.js";
+      //import { Movie } from "./component/Movie/script.js";
+
+      
+/*     import {dataMovie} from "./data/dataMovie.js";
+import {Movie} from "./component/Movie/script.js";
+Movie.render("#Movie-samples", dataMovie);
+*/
 
       // Controleur
       // Rappel, écrire window.C plutôt que let C est nécessaire pour tester depuis la console du navigateur
@@ -29,6 +36,8 @@
       C.start = function () {
         V.renderNavBar("C.handlerAbout()");
       };
+
+      
 
       // Vue (contient tout ce qui est relatif à l'affichage)
       window.V = {};
