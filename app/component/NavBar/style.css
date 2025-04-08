@@ -6,7 +6,9 @@
   color: var(--color-fg);
   background-color: var(--color-bg);
 
+
   .navbar__item {
+
     --_offset: 0.2rem;
     padding: 0.5rem 1rem;
     text-decoration: underline;

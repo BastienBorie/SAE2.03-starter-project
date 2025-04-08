@@ -10,7 +10,7 @@
   <body>
     <header id="header"></header>
 
-    <section id="content"></section>
+    <section id="filmcards"></section>
 
     <script type="module">
       import { NavBar } from "./component/NavBar/script.js";
@@ -54,10 +54,10 @@
       };
 
       V.renderMovie = async function (f) {
-        let content = document.querySelector("#content");
+        let filmcards = document.querySelector("#filmcards");
         f.forEach((movie) => {
           let HTML = Movie.format(movie);
-          content.innerHTML += HTML
+          filmcards.innerHTML += HTML
         });
       };
       

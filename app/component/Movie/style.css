@@ -1,4 +1,14 @@
+body{
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--ff-sans);
+
+}
+
+/*
 .movie {
+    margin: 5rem;
+    display: flex;
 
 }
 
@@ -14,3 +24,43 @@
 .movielist__titre{
 
 }
+
+.filmcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  /* Une carte de film */
+  .filmcard {
+    list-style: none;
+    border: 1px solid #ff0000;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 500rem;
+
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 18rem); 
+  }
+  
+  /* Effet au survol */
+  
+  /* Image d'affiche */
+  .filmcard__affiche {
+      height: auto;
+      max-width: 20rem;
+      display: block;
+    }
+    
+    .filmcard__affiche:hover {
+      transform: scale(1.02);
+    }
+  /* Titre du film */
+  .filmcard__titre {
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
