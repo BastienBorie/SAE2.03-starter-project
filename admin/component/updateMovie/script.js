@@ -1,17 +1,16 @@
 
 
-let templateFile = await fetch('./component/NewMenuForm/template.html');
+let templateFile = await fetch('./component/updateMovie/template.html');
 let template = await templateFile.text();
 
 
-let NewMenuForm = {};
+let updateMovie = {};
 
-NewMenuForm.format = function(handler){
+updateMovie.format = function(handler){
     let html= template;
     html = html.replace('{{handler}}', handler);
     return html;
 }
 
 
-export {NewMenuForm};
-
+export {updateMovie};

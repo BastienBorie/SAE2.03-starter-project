@@ -11,8 +11,10 @@
 
     <script type="module">
       import { Log } from "./component/Log/script.js";
-      import {NewMenuForm} from './component/updateMovie/script.js';
-        import {DataMenu} from './data/dataMovie.js';
+      import {updateMovie} from './component/updateMovie/script.js';
+      
+      
+      import { DataMovie } from "./data/dataMovie.js";
 
       window.C = {};
 
@@ -22,7 +24,7 @@
         C.handlerUpdate = async function(){
             
             // Sélectionne l'élément possédant la classe `.addMenu__form`
-            // il s'agit de l'élément <form> du composant NewMenuForm
+            // il s'agit de l'élément <form> du composant updateMovie
             let form = document.querySelector('.addMenu__form');
             /* 
                 Il faut comprendre l'instruction "new FormData(form)" ainsi : 
@@ -36,8 +38,8 @@
                 HTTP pour être envoyé à un serveur.
             */
             let fd = new FormData(form);
-            // Attend la réponse de la fonction `DataMenu.update(fd)`
-            let res = await DataMenu.update(fd);
+            // Attend la réponse de la fonction `DataMovie.update(fd)`
+            let res = await DataMovie.update(fd);
             // Affiche le résultat de la mise à jour dans le journal
             V.renderLog(res);
         }
