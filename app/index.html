@@ -14,8 +14,8 @@
 
     <script type="module">
       import { NavBar } from "./component/NavBar/script.js";
-
       import { Movie } from "./component/Movie/script.js";
+
       import { DataMovie } from "./data/dataMovie.js";
 
 
@@ -30,8 +30,10 @@
         );
       };
 
-      C.start = function () {
+      C.start = async function () {
         V.renderNavBar("C.handlerAbout()");
+        let movies = await DataMovie.requestMovies();
+        V.renderMovie(movies);
       };
 
       
