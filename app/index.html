@@ -15,6 +15,9 @@
     <script type="module">
       import { NavBar } from "./component/NavBar/script.js";
 
+      import { Movie } from "./component/Movie/script.js";
+      import { DataMovie } from "./data/dataMovie.js";
+
 
       // Controleur
       // Rappel, écrire window.C plutôt que let C est nécessaire pour tester depuis la console du navigateur
@@ -47,6 +50,15 @@
         let header = document.querySelector("#header");
         header.innerHTML = NavBar.format(hAbout);
       };
+
+      V.renderMovie = async function (f) {
+        let content = document.querySelector("#content");
+        f.forEach((movie) => {
+          let HTML = Movie.format(movie);
+          content.innerHTML += HTML
+        });
+      };
+      
 
       C.start(); // Démarre l'application
 

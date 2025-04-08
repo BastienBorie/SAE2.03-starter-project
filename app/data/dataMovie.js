@@ -1,7 +1,7 @@
 // data = DataMovie.js - requêtes movies - transfert
 
 // URL où se trouve le répertoire "server" sur mmi.unilim.fr
-let HOST_URL = "."; // "http://mmi.unilim.fr/????";  // CHANGE THIS TO MATCH YOUR CONFIG
+let HOST_URL = "https://mmi.unilim.fr/~borie54/SAE2.03-starter-project/"; // "http://mmi.unilim.fr/????";  // CHANGE THIS TO MATCH YOUR CONFIG
 
 let DataMovie = {};
 
@@ -21,3 +21,6 @@ DataMovie.requestMovies = async function() {
 }
 
 export {DataMovie};
+
+;//"http://mmi.unilim.fr/~????"; // CHANGE THIS TO MATCH YOUR CONFIG
+
