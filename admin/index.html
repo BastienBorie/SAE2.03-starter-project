@@ -21,11 +21,11 @@
 
        
       
-        C.handlerUpdate = async function(){
+      C.handlerUpdate = async function(){
             
-            // Sélectionne l'élément possédant la classe `.addMenu__form`
-            // il s'agit de l'élément <form> du composant updateMovie
-            let form = document.querySelector('.addMenu__form');
+            // Sélectionne l'élément possédant la classe `.addMovie__form`
+            // il s'agit de l'élément <form> du composant NewMovieForm
+            let form = document.querySelector('.addMovie__form');
             /* 
                 Il faut comprendre l'instruction "new FormData(form)" ainsi : 
                 "créer un nouvel objet FormData à partir du formulaire form"
@@ -44,10 +44,9 @@
             V.renderLog(res);
         }
 
-
       C.start = function () {
         V.renderLog("Démarrage de l'application");
-        V.renderMenu("C.handlerUpdate()");
+        V.renderMovie("C.handlerUpdate()");
       };
 
       window.V = {};
