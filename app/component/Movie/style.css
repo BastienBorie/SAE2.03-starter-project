@@ -1,66 +1,111 @@
 body{
     background-color: var(--color-bg);
-    color: var(--color-fg);
     font-family: var(--ff-sans);
 
 }
-
 /*
-.movie {
+
+.filmcards {
     margin: 5rem;
-    display: flex;
 
 }
 
-.movielist{
+.filmlist{
 
 }
 
-.movielist__affiche{
+.filmcard__affiche{
+    max-width: 20rem;
 
 
 }
 
-.movielist__titre{
+.filmcard__titre{
 
 }
 
 .filmcards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 1.5rem;                            
     padding: 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
   }
   
-  /* Une carte de film */
-  .filmcard {
+  
+  .filmlist {
     list-style: none;
-    border: 1px solid #ff0000;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 500rem;
-
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 18rem); 
+    transition: transform 0.2s ease;
+    max-width: 1400rem;
+    margin: 5rem;
   }
   
-  /* Effet au survol */
+
+  .filmcard:hover {
+    transform: scale(1.02);
+  }
   
-  /* Image d'affiche */
+  /* Image d'affiche 
   .filmcard__affiche {
-      height: auto;
-      max-width: 20rem;
-      display: block;
-    }
-    
-    .filmcard__affiche:hover {
-      transform: scale(1.02);
-    }
-  /* Titre du film */
+    height: auto;
+    display: flex;
+    max-width: 20rem;
+  }
+  
+  /* Titre du film 
   .filmcard__titre {
     text-align: left;
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: bold;
+  }
+  */
+
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 3rem;
+    color: var(--color-fg);
+    background-color: rgb(71, 71, 71);
+ 
+  }
+  
+  .filmcard__affiche {
+    overflow: hidden; 
+    border-radius: 1rem;
+  }
+  
+  .filmcards {
+    max-height: 30rem;
+    max-width: 20rem;
+    display: flex;
+    height: auto;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  
+  .filmcard__affiche:hover{
+    transform: scale(1.05);
+  }
+  
+  
+  .filmcard__titre{
+    color: var(--color-fg);
+    font-family: var(--ff-sans);
+    margin: 0;
+    padding-bottom: 2rem;
+    text-align: center;
   }
