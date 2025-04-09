@@ -39,7 +39,6 @@ function getAllMovies(){
 }
 
 
-
 function updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age){
     // Connexion à la base de données
     $cnx = new PDO("mysql:host=".HOST.";dbname=".DBNAME, DBLOGIN, DBPWD); 
