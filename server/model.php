@@ -37,3 +37,30 @@ function getAllMovies(){
     // Retourne les résultats
     return $res;
 }
+
+
+
+function updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age){
+    // Connexion à la base de données
+    $cnx = new PDO("mysql:host=".HOST.";dbname=".DBNAME, DBLOGIN, DBPWD); 
+    // Requête SQL de mise à jour du Movie avec des paramètres
+    $sql = "INSERT INTO Movie (name, director, year, length, description, id_category, image, trailer, min_age)
+            VALUES (:title, :realisateur, :year, :duree, :desc, :categorie, :image, :url, :age)";
+    // Prépare la requête SQL
+    $stmt = $cnx->prepare($sql);
+    // Lie les paramètres aux valeurs
+    $stmt->bindParam(':title', $title);
+    $stmt->bindParam(':realisateur', $real);
+    $stmt->bindParam(':year', $year);
+    $stmt->bindParam(':duree', $duree);
+    $stmt->bindParam(':desc', $desc);
+    $stmt->bindParam(':categorie', $cate);
+    $stmt->bindParam(':image', $img);
+    $stmt->bindParam(':url', $url);
+    $stmt->bindParam(':age', $age);
+    // Exécute la requête SQL
+    $stmt->execute();
+    // Récupère le nombre de lignes affectées par la requête
+    $res = $stmt->rowCount(); 
+    return $res; // Retourne le nombre de lignes affectées
+  }

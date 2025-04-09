@@ -2,21 +2,23 @@
     <h4 class="addMenu__title"># Ajouter ou modifier un menu</h4>
     <form class="addMenu__form">
 
-        <input required type="number" name="semaine" placeholder="semaine" value="1" min="1" max="52">
-        
-        <select name="jour">
-            <option value="lundi">Lundi</option>
-            <option value="mardi">Mardi</option>
-            <option value="mercredi">Mercredi</option>
-            <option value="jeudi">Jeudi</option>
-            <option value="vendredi">Vendredi</option>
-            <option value="samedi">Samedi</option>
-            <option value="dimanche">Dimanche</option>
-        </select>
-
-        <input required type="text" name="entree" placeholder="Saisir une entrée" pattern="[^0-9]*" title="Numbers are not allowed">
-        <input required type="text" name="plat" placeholder="Saisir un plat" pattern="[^0-9]*" title="Numbers are not allowed">
-        <input required type="text" name="dessert" placeholder="Saisir un dessert" pattern="[^0-9]*" title="Numbers are not allowed">
+        <input required type="text" name="Titre" placeholder="">
+        <input required type="text" name="Réalisateur" placeholder="">
+        <input required type="number" name="Sortie" placeholder="Sortie" value="1">
+        <input required type="number" name="Durée" placeholder="Durée" value="1">
+        <input required type="text" name="Desc" placeholder="">
+        <select name="Categorie">
+            <option value="Action">Action</option>
+                <option value="Romance">Romance</option>
+                <option value="Aventure">Aventure</option>
+                <option value="Drame">Drame</option>
+                <option value="Science-fiction">Science-fiction</option>
+                <option value="Horreur">Horreur</option>
+                <option value="Comédie">Comédie</option>
+            </select>
+        <input required type="text" name="Affiche" placeholder="">
+        <input required type="text" name="URL du trailer" placeholder="">
+        <input required type="number" name="Limite d'âge" placeholder="Limite d'âge" value="1">
         <input onclick="{{handler}}" type="button" value="Update" name="todo">
 
     </form>

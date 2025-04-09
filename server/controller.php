@@ -24,3 +24,32 @@ function readMoviesController(){
     $movies = getAllMovies();
     return $movies;
 }
+
+
+function updateController(){
+    /* Lecture des données de formulaire
+      On ne vérifie pas si les données sont valides, on suppose (faudra pas toujours...) que le client les a déjà
+      vérifiées avant de les envoyer 
+    */
+    $title = $_REQUEST['title'];
+    $real = $_REQUEST['real'];
+    $year = $_REQUEST['year'];
+    $desc = $_REQUEST['desc'];
+    $cate = $_REQUEST['cate'];
+    $img = $_REQUEST['img'];
+    $url = $_REQUEST['url'];
+    $age = $_REQUEST['age'];
+
+    if (empty($titre) || empty($realisateur) || empty($annee) || empty($duree) || empty($desc) || empty($categorie) || empty($image) || empty($url) || empty($age)) {
+        return "Erreur : Un champ n'a pas été remplis.";
+    }
+    // Mise à jour du Movie à l'aide de la fonction updateMovie décrite dans model.php
+    $ok = updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age);
+    // $ok est le nombre de ligne affecté par l'opération de mise à jour dans la BDD (voir model.php)
+    if ($ok!=0){
+      return "Le film $title a été ajouté";
+    }
+    else{
+      return "Une erreur est survenue lors de l'ajout du film";
+    }
+  }
