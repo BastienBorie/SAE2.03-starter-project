@@ -1,12 +1,12 @@
-<div class="addMenu">
-    <h4 class="addMenu__title"># Ajouter ou modifier un menu</h4>
-    <form class="addMenu__form">
-
-        <input required type="text" name="Titre" placeholder="">
-        <input required type="text" name="Réalisateur" placeholder="">
-        <input required type="number" name="Sortie" placeholder="Sortie" value="1">
-        <input required type="number" name="Durée" placeholder="Durée" value="1">
-        <input required type="text" name="Desc" placeholder="">
+<div class="updateMovie">
+    <h4 class="updateMovie__title"># Ajouter un film</h4>
+    <form class="updateMovie__form">
+ 
+        <input required type="text" name="Titre" placeholder="Ajouter un titre">
+        <input required type="text" name="Réalisateur" placeholder="Ajouter un réalisateur">
+        <input required type="number" name="Sortie" placeholder="Ajouter la date de sortie du film">
+        <input required type="number" name="Durée" placeholder="Ajouter la durée du film en minutes">
+        <input required type="text" name="Desc" placeholder="Ajouter une description">
         <select name="Categorie">
             <option value="Action">Action</option>
                 <option value="Romance">Romance</option>
@@ -16,9 +16,9 @@
                 <option value="Horreur">Horreur</option>
                 <option value="Comédie">Comédie</option>
             </select>
-        <input required type="text" name="Affiche" placeholder="">
-        <input required type="text" name="URL du trailer" placeholder="">
-        <input required type="number" name="Limite d'âge" placeholder="Limite d'âge" value="1">
+        <input required type="text" name="Affiche" placeholder="Ajouter une affiche">
+        <input required type="text" name="URL du trailer" placeholder="Ajouter l'URL du trailer">
+        <input required type="number" name="Limite d'âge" placeholder="Ajouter une Limite d'âge">
         <input onclick="{{handler}}" type="button" value="Update" name="todo">
 
     </form>

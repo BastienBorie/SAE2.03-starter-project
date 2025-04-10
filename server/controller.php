@@ -31,14 +31,14 @@ function updateController(){
       On ne vérifie pas si les données sont valides, on suppose (faudra pas toujours...) que le client les a déjà
       vérifiées avant de les envoyer 
     */
-    $title = $_REQUEST['title'];
-    $real = $_REQUEST['real'];
-    $year = $_REQUEST['year'];
-    $desc = $_REQUEST['desc'];
-    $cate = $_REQUEST['cate'];
-    $img = $_REQUEST['img'];
-    $url = $_REQUEST['url'];
-    $age = $_REQUEST['age'];
+    $title = $_REQUEST['title'] ?? null;
+    $real = $_REQUEST['real'] ?? null;
+    $year = $_REQUEST['year'] ?? null;
+    $desc = $_REQUEST['desc'] ?? null;
+    $cate = $_REQUEST['cate'] ?? null;
+    $img = $_REQUEST['img'] ?? null;
+    $url = $_REQUEST['url'] ?? null;
+    $age = $_REQUEST['age'] ?? null;
 
     if (empty($titre) || empty($realisateur) || empty($annee) || empty($duree) || empty($desc) || empty($categorie) || empty($image) || empty($url) || empty($age)) {
         return "Erreur : Un champ n'a pas été remplis.";
