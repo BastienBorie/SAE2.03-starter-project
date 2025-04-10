@@ -27,16 +27,17 @@ function readMoviesController(){
 
 
 function updateController(){
-    $title = $_REQUEST['title'];
-    $real = $_REQUEST['real'];
-    $year = $_REQUEST['year'];
-    $desc = $_REQUEST['desc'];
-    $cate = $_REQUEST['cate'];
-    $img = $_REQUEST['img'];
-    $url = $_REQUEST['url'];
-    $age = $_REQUEST['age'];
+    $title = $_REQUEST['title'] ?? null;
+    $real = $_REQUEST['real'] ?? null;
+    $year = $_REQUEST['year'] ?? null;
+    $duree = $_REQUEST['duree'] ?? null;
+    $desc = $_REQUEST['desc'] ?? null;
+    $cate = $_REQUEST['cate'] ?? null;
+    $img = $_REQUEST['img'] ?? null;
+    $url = $_REQUEST['url'] ?? null;
+    $age = $_REQUEST['age'] ?? null;
 
-    if (empty($title) || empty($real) || empty($year) || empty($desc) || empty($cate) || empty($img) || empty($url) || empty($age)){
+    if (empty($title) || empty($real) || empty($year) || empty($duree) || empty($desc) || empty($cate) || empty($img) || empty($url) || empty($age)){
         return "Erreur : Un ou plusieurs champs n'ont pas étés remplis.";
     }
     $ok = updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age);

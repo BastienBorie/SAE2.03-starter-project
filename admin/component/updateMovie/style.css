@@ -4,9 +4,8 @@
 }
 
 .updateMovie__title {
-    margin-bottom: 0.2rem;
-    color: #fff;
-  
+    font-size: 2rem;
+    color: black;
 }
 
 .updateMovie__form {
