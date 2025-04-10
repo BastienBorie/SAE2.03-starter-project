@@ -40,9 +40,7 @@ function getAllMovies(){
 
 
 function updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age){
-    // Connexion à la base de données
-    $cnx = new PDO("mysql:host=".HOST.";dbname=".DBNAME, DBLOGIN, DBPWD); 
-    // Requête SQL de mise à jour du Movie avec des paramètres
+    $cnx = new PDO("mysql:host=".localhost.";dbname=".borie54, borie54, borie54); 
     $sql = "INSERT INTO Movie (name, director, year, length, description, id_category, image, trailer, min_age)
             VALUES (:title, :realisateur, :year, :duree, :desc, :categorie, :image, :url, :age)";
     // Prépare la requête SQL
