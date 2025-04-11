@@ -25,7 +25,6 @@
       C.handlerUpdate = async function () {
         let form = document.querySelector(".updateMovie__form");
         let fd = new FormData(form);
-        console.log(response);
         let res = await DataMovie.add(fd);
         V.renderLog(res);
       };
