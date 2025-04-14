@@ -20,7 +20,7 @@ define("DBPWD", "borie54");
 
 function getAllMovies(){
     // Connexion à la base de données
-    $cnx = new PDO("mysql:host=".HOST.";dbname=".DBNAME, DBLOGIN, DBPWD);
+    $cnx = new PDO("mysql:host=".localhost.";dbname=".borie54, borie54, borie54);
     
     // Requête SQL pour récupérer le menu avec des paramètres
     $sql = "select id, name, image from Movie";

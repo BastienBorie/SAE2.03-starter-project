@@ -18,8 +18,8 @@
   }
   
   .filmcards {
-    max-height: 30rem;
-    max-width: 20rem;
+    min-height: 30rem;
+    min-width: 20rem;
     display: flex;
     height: auto;
     position: relative;
