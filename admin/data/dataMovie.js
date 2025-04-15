@@ -26,13 +26,6 @@ DataMovie.add = async function (fdata) {
 
   let answer = await fetch(HOST_URL + "/server/script.php?todo=updateMovie", config);
   // console.log("DataMovie.add 3 "); // Point de repère n°3
-  if (!answer.ok) {
-    console.error("Erreur HTTP", answer.status);
-    let txt = await answer.text(); // lire le texte brut pour débug
-    console.error("Contenu brut :", txt);
-    return { error: "Erreur serveur" };
-  }
-  
   let data = await answer.json();
   return data;
 };

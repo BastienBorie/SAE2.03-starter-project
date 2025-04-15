@@ -38,7 +38,7 @@ function updateController(){
     $age = $_REQUEST['age'] ?? null;
 
     if (empty($title) || empty($real) || empty($year) || empty($duree) || empty($desc) || empty($cate) || empty($img) || empty($url) || empty($age)){
-        return "Erreur : Un ou plusieurs champs n'ont pas étés remplis.";
+        return "Erreur : Tous les champs doivent être remplis.";
     }
     $ok = updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age);
     if ($ok!=0){

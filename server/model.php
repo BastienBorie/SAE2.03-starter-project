@@ -20,7 +20,7 @@ define("DBPWD", "borie54");
 
 function getAllMovies(){
     // Connexion à la base de données
-    $cnx = new PDO("mysql:host=".localhost.";dbname=".borie54, borie54, borie54);
+    $cnx = new PDO("mysql:host=".HOST.";dbname=".DBNAME, DBLOGIN, DBPWD);
     
     // Requête SQL pour récupérer le menu avec des paramètres
     $sql = "select id, name, image from Movie";
@@ -40,7 +40,7 @@ function getAllMovies(){
 
 
 function updateMovie($title, $real, $year, $duree, $desc, $cate, $img, $url, $age){
-    $cnx = new PDO("mysql:host=".localhost.";dbname=".borie54, borie54, borie54); 
+    $cnx = new PDO("mysql:host=".HOST.";dbname=".DBNAME, DBLOGIN, DBPWD);
 
     $sql = "INSERT INTO Movie (name, director, year, length, description, id_category, image, trailer, min_age)
             VALUES (:title, :realisateur, :year, :duree, :desc, :categorie, :image, :url, :age)";

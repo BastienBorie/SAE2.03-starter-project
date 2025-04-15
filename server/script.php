@@ -15,6 +15,8 @@
  *  Et dans une véritable application il peut y avoir énormément de paramètres, ce qui deviendrait compliqué et illisible.
  * 
  */
+ini_set ('display_errors', 1);
+error_reporting(E_ALL);
 
 /**
  * Inclusion du fichier controller.php.
