@@ -48,3 +48,11 @@ function updateController(){
       return "Une erreur est survenue lors de l'ajout du film";
     }
   }
+
+  function readMovieDetailsController(){
+    $id = $_REQUEST['id'] ?? null;
+    if (empty($id)) {
+        return "erreur";
+    }
+    return getMovielookdetails($id);
+  }

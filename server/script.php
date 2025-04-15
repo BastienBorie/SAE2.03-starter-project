@@ -61,6 +61,11 @@ if ( isset($_REQUEST['todo']) ){
         $data = updateController();
         break;
   
+        case 'getMovielookdetails': 
+          $data = readMovieDetailsController(); 
+          break;
+          
+
         default:
         echo json_encode('[error] Unknown todo value');
         http_response_code(400);
