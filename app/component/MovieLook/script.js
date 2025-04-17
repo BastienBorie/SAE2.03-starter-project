@@ -1,9 +1,9 @@
-let templateFile = await fetch("./component/Movie/template.html");
+let templateFile = await fetch("./component/MovieLook/template.html");
 let template = await templateFile.text();
 
-let Movie = {};
+let MovieDetail = {};
 
-Movie.format = function (movie) {
+MovieDetail.format = function (movie) {
   let html = template;
   html = html.replace("{{image}}", movie.image);
   html = html.replaceAll("{{name}}", movie.name);
@@ -17,7 +17,7 @@ Movie.format = function (movie) {
   return html;
 };
 
-export { Movie };
+export { MovieDetail };
 
 
 

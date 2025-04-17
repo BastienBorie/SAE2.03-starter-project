@@ -1,18 +1,26 @@
 
-   <section class="filmcardslook" id="content">
-      <ul class="filmcardslook">
-          <img class="filmcardslook__affiche" src="https://mmi.unilim.fr/~borie54/SAE2.03-starter-project/server/images/{{image}}" alt="{{name}}">
-          <li class="filmcardslook__titre">
+   <section class="filmlook" id="content">
+      <div class="filmlook">
+          <img class="filmlook__affiche" src="https://mmi.unilim.fr/~borie54/SAE2.03-starter-project/server/images/{{image}}" alt="{{name}}">
+          <p class="filmlook__titre">
             <h2>{{name}}</h2>
-          </li>
-          <li class="filmcardslook__real">{{real}}</li>
-          <li class="filmcardslook__year">{{year}}</li>
-          <li class="filmcardslook__duree">{{duree}}</li>
-          <li class="filmcardslook__desc">{{desc}}</li>
-          <li class="filmcardslook__cate">{{cate}}</li>
-          <li class="filmcardslook__url">{{url}}</li>
-          <li class="filmcardslook__age">{{age}}</li>
-      </ul>
+          </p>
+          <p class="filmlook__real">{{real}}</p>
+          <p class="filmlook__year">{{year}}</p>
+          <p class="filmlook__duree">{{duree}}</p>
+          <p class="filmlook__desc">{{desc}}</p>
+          <p class="filmlook__cate">{{cate}}</p>
+          <p class="filmlook__age">{{age}}</p>
+          <iframe
+          class="details__trailer"
+          src="{{url}}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
   </section>
 
 

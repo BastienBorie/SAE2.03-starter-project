@@ -15,7 +15,7 @@
     <script type="module">
       import { NavBar } from "./component/NavBar/script.js";
       import { Movie } from "./component/Movie/script.js";
-      import { MovieLook } from "./component/MovieLook/script.js";
+      import { MovieDetail } from "./component/MovieLook/script.js";
 
       import { DataMovie } from "./data/dataMovie.js";
 
@@ -31,16 +31,15 @@
         );
       };
       
-      C.handlerMovieLook = async function (IDMovie) {
-        let MoviesData = await DataMovie.requestMovieDetails(IDMovie);
-        V.renderMovieLook(MoviesData); 
-      };
+      C.handlerDetail = async function (id) {
+  let MoviesData = await DataMovie.requestMovieDetails(id);
+  V.renderMovieLook(MoviesData);
+};
 
       C.start = async function () {
         V.renderNavBar("C.handlerAbout()");
         let movies = await DataMovie.requestMovies();
         V.renderMovie(movies);
-        V.renderMovieLook("C.handlerMovieLook");
       };
 
       
@@ -67,10 +66,10 @@
         });
       };
 
-      V.renderMovieLook = function (MoviesData) {
-        let content = document.querySelector("#content");
-        content.innerHTML = MovieLook.format(movies);
-      };
+      V.renderMovieLook = function (movie) {
+  let content = document.querySelector("#content");
+  content.innerHTML = MovieDetail.format(movie);
+};
 
       C.start(); // Démarre l'application
 
