@@ -22,4 +22,3 @@ DataMovie.requestMovies = async function() {
 
 export {DataMovie};
 
-;
